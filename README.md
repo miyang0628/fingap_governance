@@ -1,3 +1,58 @@
+# FinGap-Governance
+
+Replication materials for the paper *"FinGap-Governance: A
+Traceability-Centric Framework for Diagnosing Isomorphic Regulatory Blind
+Spots in Financial LLMs across Anomaly Detection, Advisory, and
+Accounting Tasks."*
+
+> **Anonymized for peer review.** Author, affiliation, and venue
+> information has been removed in accordance with double-blind review
+> requirements. This notice will be replaced with full metadata upon
+> acceptance.
+
+This repository contains the schema-audit and illustrative-walkthrough
+code that supports the paper's existence-proof evidence. It does **not**
+contain large-scale quantitative measurement or full dataset labeling,
+which are out of scope for the paper and reserved for a companion study.
+
+---
+
+## What this repository provides
+
+- A **schema audit** of three public financial datasets (one per task),
+  documenting that each carries a determination label but no
+  judgment-to-provision linkage label.
+- Three **illustrative walkthroughs** (advisory, anomaly, accounting),
+  each run under three conditions — direct judgment, vanilla RAG, and the
+  provision-judgment graph (GraphRAG) — as an existence proof of the
+  isomorphic failure and its structural remedy.
+- **Figure-generation** code that reproduces the greyscale figures used
+  in the paper from the walkthrough outputs.
+
+The three conditions are implemented as deterministic stubs that encode
+the traversal logic described in the paper; they are sufficient to
+reproduce the reported walkthrough outcomes and figures. Replacing the
+stubs with live model calls is left to downstream empirical work.
+
+---
+
+## Repository structure
+.
+├── data/ # not tracked; populated by setup (see below)
+│ ├── anomaly/raw/ # transaction CSV
+│ ├── advisory/labeled/ # consulting QAQ JSON
+│ ├── accounting/labeled/ # accounting QA JSON (standard sub-tree preserved)
+│ └── cases/ # reconstructed, PII-free walkthrough inputs
+├── notebooks/
+│ ├── setup_data.ipynb # unpack source archives into data/
+│ ├── 00_shared_utils.ipynb # paths, provision vocabulary, guards, writers
+│ ├── 01_advisory_str.ipynb # audit + walkthrough: suitability vs appropriateness
+│ ├── 02_anomaly_str_ctr.ipynb# audit + walkthrough: STR vs CTR
+│ ├── 03_accounting_ifrs15.ipynb # audit + walkthrough: over-time vs point-in-time
+│ └── 04_figures.ipynb # greyscale figures from walkthrough outputs
+└── results/
+├── figures/ # generated figures (png + pdf, dpi 600)
+└── tables/ # schema-audit tables + walkthrough JSON
 
 ---
 
