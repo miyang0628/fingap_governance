@@ -37,22 +37,25 @@ stubs with live model calls is left to downstream empirical work.
 ---
 
 ## Repository structure
+
+```text
 .
-├── data/ # not tracked; populated by setup (see below)
-│ ├── anomaly/raw/ # transaction CSV
-│ ├── advisory/labeled/ # consulting QAQ JSON
-│ ├── accounting/labeled/ # accounting QA JSON (standard sub-tree preserved)
-│ └── cases/ # reconstructed, PII-free walkthrough inputs
+├── data/                           # not tracked; populated by setup (see below)
+│   ├── anomaly/raw/                 # transaction CSV
+│   ├── advisory/labeled/            # consulting QAQ JSON
+│   ├── accounting/labeled/          # accounting QA JSON (standard sub-tree preserved)
+│   └── cases/                       # reconstructed, PII-free walkthrough inputs
 ├── notebooks/
-│ ├── setup_data.ipynb # unpack source archives into data/
-│ ├── 00_shared_utils.ipynb # paths, provision vocabulary, guards, writers
-│ ├── 01_advisory_str.ipynb # audit + walkthrough: suitability vs appropriateness
-│ ├── 02_anomaly_str_ctr.ipynb# audit + walkthrough: STR vs CTR
-│ ├── 03_accounting_ifrs15.ipynb # audit + walkthrough: over-time vs point-in-time
-│ └── 04_figures.ipynb # greyscale figures from walkthrough outputs
+│   ├── setup_data.ipynb             # unpack source archives into data/
+│   ├── 00_shared_utils.ipynb        # paths, provision vocabulary, guards, writers
+│   ├── 01_advisory_str.ipynb        # audit + walkthrough: suitability vs appropriateness
+│   ├── 02_anomaly_str_ctr.ipynb     # audit + walkthrough: STR vs CTR
+│   ├── 03_accounting_ifrs15.ipynb   # audit + walkthrough: over-time vs point-in-time
+│   └── 04_figures.ipynb             # greyscale figures from walkthrough outputs
 └── results/
-├── figures/ # generated figures (png + pdf, dpi 600)
-└── tables/ # schema-audit tables + walkthrough JSON
+    ├── figures/                     # generated figures (png + pdf, dpi 600)
+    └── tables/                      # schema-audit tables + walkthrough JSON
+```
 
 ---
 
