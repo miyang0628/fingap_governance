@@ -1,0 +1,13 @@
+﻿column,role
+출금계좌일련번호,feature
+입금계좌일련번호,feature
+출금금융회사일련번호,feature
+입금금융회사일련번호,feature
+자금구분,feature
+거래금액,feature
+거래시간대,feature
+매체구분,feature
+거래일자,feature
+이상거래유형,determination
+이상거래여부,determination
+이상거래설명,determination

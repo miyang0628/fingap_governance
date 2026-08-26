@@ -1,0 +1,37 @@
+{
+  "case_id": "ACC-BND-01",
+  "task": "accounting",
+  "boundary_axis": "over-time criterion (para. 35)",
+  "gold_provisions": [
+    "KIFRS1115-P35-3"
+  ],
+  "verdicts": [
+    {
+      "condition": "direct",
+      "determination": "construction -> over-time (inertia)",
+      "cited": [
+        "KIFRS1011"
+      ],
+      "traceable": false,
+      "failure": "misattribution"
+    },
+    {
+      "condition": "vanilla_rag",
+      "determination": "recites 5-step model, no criterion tested",
+      "cited": [
+        "KIFRS1115-P35"
+      ],
+      "traceable": false,
+      "failure": "logic_disconnection"
+    },
+    {
+      "condition": "graph_rag",
+      "determination": "criteria unclear/unmet -> point-in-time branch; superseded 1011 citation blocked",
+      "cited": [
+        "KIFRS1115-P35-3"
+      ],
+      "traceable": true,
+      "failure": null
+    }
+  ]
+}
