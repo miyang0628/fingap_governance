@@ -1,0 +1,27 @@
+[
+  {
+    "provision_id": "KIFRS1115-P35",
+    "label": "K-IFRS 1115 para. 35 (over time)",
+    "text": "An entity recognises revenue over time if one of three criteria is met: (1) the customer simultaneously receives and consumes the benefits as the entity performs; (2) the entity's performance creates or enhances an asset the customer controls; or (3) the entity's performance does not create an asset with an alternative use and the entity has an enforceable right to payment for performance completed to date."
+  },
+  {
+    "provision_id": "KIFRS1115-P35-3",
+    "label": "K-IFRS 1115 para. 35(3) (no alt use + right to payment)",
+    "text": "Under the third over-time criterion, the asset has no alternative use to the entity if the entity is restricted from redirecting it, AND the entity holds an enforceable right to payment for performance completed to date including a reasonable margin. BOTH conditions must hold; the absence of an enforceable right to payment defeats over-time recognition under this criterion."
+  },
+  {
+    "provision_id": "KIFRS1115-P38",
+    "label": "K-IFRS 1115 para. 38 (point in time)",
+    "text": "If a performance obligation is not satisfied over time, it is satisfied at a point in time; the entity recognises revenue when the customer obtains control of the asset, considering indicators such as present right to payment, legal title, physical possession, risks and rewards, and acceptance."
+  },
+  {
+    "provision_id": "KIFRS1018",
+    "label": "K-IFRS 1018 (superseded)",
+    "text": "Former revenue standard superseded by K-IFRS 1115. Retained here only to test citation of outdated standards; must not be cited as the current basis."
+  },
+  {
+    "provision_id": "KIFRS1011",
+    "label": "K-IFRS 1011 (construction contracts, superseded)",
+    "text": "Former construction-contract standard superseded by K-IFRS 1115. Must not be cited as the current basis for construction revenue."
+  }
+]

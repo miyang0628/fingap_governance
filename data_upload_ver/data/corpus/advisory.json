@@ -1,0 +1,32 @@
+[
+  {
+    "provision_id": "FCPA-Art17",
+    "label": "FCPA Art. 17 (suitability)",
+    "text": "Where a financial product is recommended or solicited to a retail client, the firm must first ascertain the client's status, financial situation, and investment experience, and must not recommend a product found unsuitable in light of that assessment. The suitability duty is triggered by an act of solicitation or recommendation toward a specific product."
+  },
+  {
+    "provision_id": "FCPA-Art18",
+    "label": "FCPA Art. 18 (appropriateness)",
+    "text": "Where a retail client, on the client's own initiative and without solicitation, seeks to enter into a non-recommended product, the firm must verify the client's information and warn the client if the product is inappropriate. The appropriateness duty applies to information-only, client-initiated transactions where no specific product was recommended."
+  },
+  {
+    "provision_id": "FCPA-Art19",
+    "label": "FCPA Art. 19 (duty to explain)",
+    "text": "When concluding a contract, the firm must explain the key terms, risks, and costs of the product so that the client understands them, and obtain confirmation. The explanation duty attaches to contract conclusion regardless of who initiated the transaction."
+  },
+  {
+    "provision_id": "FCPA-Art20",
+    "label": "FCPA Art. 20 (unfair business conduct)",
+    "text": "A firm must not exploit its superior position to compel a client to enter transactions unrelated to the client's needs, tie unnecessary products, or otherwise engage in unfair business conduct."
+  },
+  {
+    "provision_id": "FCPA-Art21",
+    "label": "FCPA Art. 21 (improper solicitation)",
+    "text": "A firm must not provide false information, assert uncertain matters as certain, or solicit without the client's request for certain high-risk products (unsolicited-call prohibition)."
+  },
+  {
+    "provision_id": "FCPA-Art22",
+    "label": "FCPA Art. 22 (advertising regulation)",
+    "text": "Advertising of financial products must be fair and not misleading, must include statutory risk disclosures, and must pass internal review before publication."
+  }
+]

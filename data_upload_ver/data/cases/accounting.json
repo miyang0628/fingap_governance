@@ -1,0 +1,398 @@
+[
+  {
+    "case_id": "ACC-01",
+    "task": "accounting",
+    "boundary_axis": "over-time vs point-in-time",
+    "facts": "A contractor builds a customized factory on the customer's land; the customer controls the work-in-progress throughout construction.",
+    "gold_determination": "over_time",
+    "gold_provisions": [
+      "KIFRS1115-P35"
+    ],
+    "discriminating_condition": "the customer controls the asset as it is created",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Custom factory construction for a small manufacturing enterprise where customer controls WIP qualifies for over-time revenue recognition (K-IFRS 1115 p. 35).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Custom factory construction for a small manufacturing enterprise where customer controls WIP qualifies for over-time revenue recognition (K-IFRS 1115 p. 35)."
+    }
+  },
+  {
+    "case_id": "ACC-02",
+    "task": "accounting",
+    "boundary_axis": "over-time vs point-in-time",
+    "facts": "A manufacturer produces a bespoke machine with no alternative use and holds an enforceable right to payment for work completed to date including margin.",
+    "gold_determination": "over_time",
+    "gold_provisions": [
+      "KIFRS1115-P35-3"
+    ],
+    "discriminating_condition": "no alternative use AND an enforceable right to payment for performance to date",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Bespoke equipment for a thin-filer firm with no alt use and enforceable right to payment with margin meets over-time criteria (K-IFRS 1115 p. 35(3)).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Bespoke equipment for a thin-filer firm with no alt use and enforceable right to payment with margin meets over-time criteria (K-IFRS 1115 p. 35(3))."
+    }
+  },
+  {
+    "case_id": "ACC-03",
+    "task": "accounting",
+    "boundary_axis": "over-time vs point-in-time",
+    "facts": "A manufacturer builds a highly customized asset with no alternative use, but the contract gives NO enforceable right to payment for performance completed to date if the customer cancels.",
+    "gold_determination": "point_in_time",
+    "gold_provisions": [
+      "KIFRS1115-P38"
+    ],
+    "discriminating_condition": "no alternative use but NO enforceable right to payment, so the over-time criterion fails",
+    "difficulty": "boundary",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Lack of enforceable right to payment upon contract cancellation forces point-in-time recognition even for custom SME assets (K-IFRS 1115 p. 38).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Lack of enforceable right to payment upon contract cancellation forces point-in-time recognition even for custom SME assets (K-IFRS 1115 p. 38)."
+    }
+  },
+  {
+    "case_id": "ACC-04",
+    "task": "accounting",
+    "boundary_axis": "over-time vs point-in-time",
+    "facts": "A retailer sells standard off-the-shelf appliances shipped to customers.",
+    "gold_determination": "point_in_time",
+    "gold_provisions": [
+      "KIFRS1115-P38"
+    ],
+    "discriminating_condition": "a standard good with alternative use is delivered; control transfers at a point in time",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Delivery of standard equipment to a small enterprise transfers control at a point in time (K-IFRS 1115 p. 38).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Delivery of standard equipment to a small enterprise transfers control at a point in time (K-IFRS 1115 p. 38)."
+    }
+  },
+  {
+    "case_id": "ACC-05",
+    "task": "accounting",
+    "boundary_axis": "supersession trap",
+    "facts": "A construction firm's analyst drafts a memo recognizing revenue on a long-term contract and wants to cite the old construction-contract standard as the basis.",
+    "gold_determination": "over_time",
+    "gold_provisions": [
+      "KIFRS1115-P35"
+    ],
+    "discriminating_condition": "current standard governs; the superseded construction standard must not be cited",
+    "difficulty": "distractor",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Tests supersession/hallucination: KIFRS1011/1018 must not be cited as current. | Expert: Confirmed. Revenue recognition for long-term SME contracts must cite current K-IFRS 1115 (over-time); superseded standards cannot be cited.",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Revenue recognition for long-term SME contracts must cite current K-IFRS 1115 (over-time); superseded standards cannot be cited."
+    }
+  },
+  {
+    "case_id": "ACC-06",
+    "task": "accounting",
+    "boundary_axis": "over-time vs point-in-time",
+    "facts": "A cleaning company provides daily office cleaning under an annual contract; the customer consumes the benefit as the service is performed.",
+    "gold_determination": "over_time",
+    "gold_provisions": [
+      "KIFRS1115-P35"
+    ],
+    "discriminating_condition": "the customer simultaneously receives and consumes the benefits as the entity performs",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Routine cleaning services for small business offices where customer consumes benefits continuously qualify for over-time recognition (K-IFRS 1115 p. 35).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Routine cleaning services for small business offices where customer consumes benefits continuously qualify for over-time recognition (K-IFRS 1115 p. 35)."
+    }
+  },
+  {
+    "case_id": "ACC-07",
+    "task": "accounting",
+    "boundary_axis": "over-time vs point-in-time",
+    "facts": "The entity builds an asset with no alternative use and holds an enforceable right to payment for work to date.",
+    "gold_determination": "over_time",
+    "gold_provisions": [
+      "KIFRS1115-P35-3"
+    ],
+    "discriminating_condition": "no alternative use AND an enforceable right to payment to date",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Customized asset with no alt use and enforceable right to payment to date meets over-time requirements (K-IFRS 1115 p. 35(3)).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Customized asset with no alt use and enforceable right to payment to date meets over-time requirements (K-IFRS 1115 p. 35(3))."
+    }
+  },
+  {
+    "case_id": "ACC-08",
+    "task": "accounting",
+    "boundary_axis": "over-time vs point-in-time",
+    "facts": "The asset has no alternative use, but there is no enforceable right to payment for performance completed to date.",
+    "gold_determination": "point_in_time",
+    "gold_provisions": [
+      "KIFRS1115-P38"
+    ],
+    "discriminating_condition": "no alternative use but NO enforceable right to payment, over-time criterion fails",
+    "difficulty": "boundary",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Absence of enforceable right to payment for work to date forces point-in-time recognition for SME custom projects (K-IFRS 1115 p. 38).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Absence of enforceable right to payment for work to date forces point-in-time recognition for SME custom projects (K-IFRS 1115 p. 38)."
+    }
+  },
+  {
+    "case_id": "ACC-09",
+    "task": "accounting",
+    "boundary_axis": "over-time vs point-in-time",
+    "facts": "The entity sells a standard product with alternative use, delivered to the customer.",
+    "gold_determination": "point_in_time",
+    "gold_provisions": [
+      "KIFRS1115-P38"
+    ],
+    "discriminating_condition": "a standard good with alternative use transfers control at a point in time",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Standard product sale to a small business transfers control at a point in time upon delivery (K-IFRS 1115 p. 38).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Standard product sale to a small business transfers control at a point in time upon delivery (K-IFRS 1115 p. 38)."
+    }
+  },
+  {
+    "case_id": "ACC-10",
+    "task": "accounting",
+    "boundary_axis": "over-time vs point-in-time",
+    "facts": "The entity enhances an asset that the customer controls throughout performance.",
+    "gold_determination": "over_time",
+    "gold_provisions": [
+      "KIFRS1115-P35"
+    ],
+    "discriminating_condition": "the customer controls the asset as it is created",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Enhancing an asset controlled by a small enterprise throughout contract execution requires over-time recognition (K-IFRS 1115 p. 35).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Enhancing an asset controlled by a small enterprise throughout contract execution requires over-time recognition (K-IFRS 1115 p. 35)."
+    }
+  },
+  {
+    "case_id": "ACC-11",
+    "task": "accounting",
+    "boundary_axis": "over-time vs point-in-time",
+    "facts": "The entity builds an asset with no alternative use and holds an enforceable right to payment for work to date.",
+    "gold_determination": "over_time",
+    "gold_provisions": [
+      "KIFRS1115-P35-3"
+    ],
+    "discriminating_condition": "no alternative use AND an enforceable right to payment to date",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. No alt use and enforceable right to payment to date satisfies over-time revenue recognition for SME orders (K-IFRS 1115 p. 35(3)).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. No alt use and enforceable right to payment to date satisfies over-time revenue recognition for SME orders (K-IFRS 1115 p. 35(3))."
+    }
+  },
+  {
+    "case_id": "ACC-12",
+    "task": "accounting",
+    "boundary_axis": "over-time vs point-in-time",
+    "facts": "The entity sells a standard product with alternative use, delivered to the customer.",
+    "gold_determination": "point_in_time",
+    "gold_provisions": [
+      "KIFRS1115-P38"
+    ],
+    "discriminating_condition": "a standard good with alternative use transfers control at a point in time",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Standard goods delivery to a small business client transfers control at a point in time (K-IFRS 1115 p. 38).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Standard goods delivery to a small business client transfers control at a point in time (K-IFRS 1115 p. 38)."
+    }
+  },
+  {
+    "case_id": "ACC-13",
+    "task": "accounting",
+    "boundary_axis": "over-time vs point-in-time",
+    "facts": "A software firm delivers a perpetual off-the-shelf license with no further obligations.",
+    "gold_determination": "point_in_time",
+    "gold_provisions": [
+      "KIFRS1115-P38"
+    ],
+    "discriminating_condition": "control of a standard license transfers at a point in time",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Perpetual software license delivery to a small enterprise with no further performance obligations transfers control at a point in time (K-IFRS 1115 p. 38).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Perpetual software license delivery to a small enterprise with no further performance obligations transfers control at a point in time (K-IFRS 1115 p. 38)."
+    }
+  },
+  {
+    "case_id": "ACC-14",
+    "task": "accounting",
+    "boundary_axis": "over-time vs point-in-time",
+    "facts": "An engineering firm constructs a custom bridge on public land with an enforceable right to payment for work to date and no alternative use of the partially built structure.",
+    "gold_determination": "over_time",
+    "gold_provisions": [
+      "KIFRS1115-P35-3"
+    ],
+    "discriminating_condition": "no alternative use AND enforceable right to payment to date",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Custom bridge/infrastructure construction for small local entities with enforceable right to payment meets over-time criteria (K-IFRS 1115 p. 35(3)).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Custom bridge/infrastructure construction for small local entities with enforceable right to payment meets over-time criteria (K-IFRS 1115 p. 35(3))."
+    }
+  },
+  {
+    "case_id": "ACC-15",
+    "task": "accounting",
+    "boundary_axis": "boundary right-to-payment",
+    "facts": "A shipbuilder constructs a specialized vessel with no alternative use; the contract allows the buyer to cancel with only a nominal fee that does not cover work to date.",
+    "gold_determination": "point_in_time",
+    "gold_provisions": [
+      "KIFRS1115-P38"
+    ],
+    "discriminating_condition": "no alternative use but the right to payment is not enforceable for work to date",
+    "difficulty": "boundary",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Nominal cancellation fee does not cover work to date for specialized vessels, failing over-time criteria; point-in-time applies (K-IFRS 1115 p. 38).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Nominal cancellation fee does not cover work to date for specialized vessels, failing over-time criteria; point-in-time applies (K-IFRS 1115 p. 38)."
+    }
+  },
+  {
+    "case_id": "ACC-16",
+    "task": "accounting",
+    "boundary_axis": "supersession trap",
+    "facts": "An analyst prepares revenue recognition for a service contract and considers citing a superseded revenue standard alongside the current one.",
+    "gold_determination": "over_time",
+    "gold_provisions": [
+      "KIFRS1115-P35"
+    ],
+    "discriminating_condition": "only the current standard grounds the determination; superseded standards must not be cited",
+    "difficulty": "distractor",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. SME service contract revenue recognition must be grounded solely in current K-IFRS 1115 (over-time); superseded standards cannot be cited.",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. SME service contract revenue recognition must be grounded solely in current K-IFRS 1115 (over-time); superseded standards cannot be cited."
+    }
+  },
+  {
+    "case_id": "ACC-17",
+    "task": "accounting",
+    "boundary_axis": "over-time vs point-in-time",
+    "facts": "A consultancy delivers a one-off report; the customer obtains the benefit only upon final delivery and acceptance.",
+    "gold_determination": "point_in_time",
+    "gold_provisions": [
+      "KIFRS1115-P38"
+    ],
+    "discriminating_condition": "benefit is obtained only at final delivery/acceptance, not continuously",
+    "difficulty": "boundary",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Consulting report for a small firm where benefit is obtained only upon final acceptance is recognized at a point in time (K-IFRS 1115 p. 38).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Consulting report for a small firm where benefit is obtained only upon final acceptance is recognized at a point in time (K-IFRS 1115 p. 38)."
+    }
+  },
+  {
+    "case_id": "ACC-18",
+    "task": "accounting",
+    "boundary_axis": "over-time vs point-in-time",
+    "facts": "A telecom provides monthly network service that the customer consumes continuously over the contract.",
+    "gold_determination": "over_time",
+    "gold_provisions": [
+      "KIFRS1115-P35"
+    ],
+    "discriminating_condition": "the customer consumes the benefit continuously as the entity performs",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Monthly telecom network service continuously consumed by a small business meets over-time revenue recognition criteria (K-IFRS 1115 p. 35).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Monthly telecom network service continuously consumed by a small business meets over-time revenue recognition criteria (K-IFRS 1115 p. 35)."
+    }
+  }
+]

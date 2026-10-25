@@ -1,0 +1,40 @@
+{
+  "provision_nodes": [
+    {
+      "id": "TFTIA-Art4",
+      "label": "TFTIA Art. 4 (STR)",
+      "status": "current"
+    },
+    {
+      "id": "TFTIA-Art4-2",
+      "label": "TFTIA Art. 4-2 (CTR)",
+      "status": "current"
+    },
+    {
+      "id": "TFTIA-Enf-Art8-2",
+      "label": "TFTIA Enf. Decree Art. 8-2 (KRW 10M / 1 business day)",
+      "status": "current"
+    }
+  ],
+  "judgment_edges": [
+    {
+      "condition": "there are reasonable grounds to suspect money laundering, including deposits structured to stay below the threshold",
+      "determination": "STR",
+      "provision_id": "TFTIA-Art4",
+      "priority": 2
+    },
+    {
+      "condition": "cash of KRW 10 million or more is paid or received, aggregated per person within one business day, with no suspicion",
+      "determination": "CTR",
+      "provision_id": "TFTIA-Art4-2",
+      "priority": 1
+    },
+    {
+      "condition": "cash is below the threshold or split across more than one business day and there is no suspicion",
+      "determination": "none",
+      "provision_id": "TFTIA-Art4-2",
+      "priority": 0
+    }
+  ],
+  "supersession_edges": []
+}

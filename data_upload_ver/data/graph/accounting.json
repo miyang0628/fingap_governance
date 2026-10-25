@@ -1,0 +1,59 @@
+{
+  "provision_nodes": [
+    {
+      "id": "KIFRS1115-P35",
+      "label": "K-IFRS 1115 para. 35 (over time)",
+      "status": "current"
+    },
+    {
+      "id": "KIFRS1115-P35-3",
+      "label": "K-IFRS 1115 para. 35(3) (no alt use + right to payment)",
+      "status": "current"
+    },
+    {
+      "id": "KIFRS1115-P38",
+      "label": "K-IFRS 1115 para. 38 (point in time)",
+      "status": "current"
+    },
+    {
+      "id": "KIFRS1018",
+      "label": "K-IFRS 1018 (superseded)",
+      "status": "superseded"
+    },
+    {
+      "id": "KIFRS1011",
+      "label": "K-IFRS 1011 (superseded)",
+      "status": "superseded"
+    }
+  ],
+  "judgment_edges": [
+    {
+      "condition": "the asset has no alternative use to the entity AND the entity has an enforceable right to payment for performance to date",
+      "determination": "over_time",
+      "provision_id": "KIFRS1115-P35-3",
+      "priority": 3
+    },
+    {
+      "condition": "the customer controls the asset as it is created or consumes benefits as the entity performs",
+      "determination": "over_time",
+      "provision_id": "KIFRS1115-P35",
+      "priority": 2
+    },
+    {
+      "condition": "no over-time criterion is met (e.g. no alternative use but NO enforceable right to payment, or a standard good is delivered)",
+      "determination": "point_in_time",
+      "provision_id": "KIFRS1115-P38",
+      "priority": 1
+    }
+  ],
+  "supersession_edges": [
+    {
+      "old": "KIFRS1018",
+      "new": "KIFRS1115-P35"
+    },
+    {
+      "old": "KIFRS1011",
+      "new": "KIFRS1115-P35"
+    }
+  ]
+}

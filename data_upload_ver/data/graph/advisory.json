@@ -1,0 +1,45 @@
+{
+  "provision_nodes": [
+    {
+      "id": "FCPA-Art17",
+      "label": "FCPA Art. 17 (suitability)",
+      "status": "current"
+    },
+    {
+      "id": "FCPA-Art18",
+      "label": "FCPA Art. 18 (appropriateness)",
+      "status": "current"
+    },
+    {
+      "id": "FCPA-Art19",
+      "label": "FCPA Art. 19 (duty to explain)",
+      "status": "current"
+    },
+    {
+      "id": "FCPA-Art22",
+      "label": "FCPA Art. 22 (advertising)",
+      "status": "current"
+    }
+  ],
+  "judgment_edges": [
+    {
+      "condition": "the firm recommended or solicited a specific product to the client",
+      "determination": "suitability",
+      "provision_id": "FCPA-Art17",
+      "priority": 2
+    },
+    {
+      "condition": "the client initiated the transaction and no specific product was recommended (information only)",
+      "determination": "appropriateness",
+      "provision_id": "FCPA-Art18",
+      "priority": 1
+    },
+    {
+      "condition": "the matter concerns misleading advertising rather than an individual transaction",
+      "determination": "none",
+      "provision_id": "FCPA-Art22",
+      "priority": 0
+    }
+  ],
+  "supersession_edges": []
+}

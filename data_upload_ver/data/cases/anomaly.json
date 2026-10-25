@@ -1,0 +1,405 @@
+[
+  {
+    "case_id": "ANO-01",
+    "task": "anomaly",
+    "boundary_axis": "STR vs CTR",
+    "facts": "A customer deposited KRW 15,000,000 in cash in a single transaction in one business day. There was nothing otherwise suspicious about the customer or the funds.",
+    "gold_determination": "CTR",
+    "gold_provisions": [
+      "TFTIA-Art4-2",
+      "TFTIA-Enf-Art8-2"
+    ],
+    "discriminating_condition": "cash of KRW 10M or more aggregated within one business day, no suspicion",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Single-day cash deposit of KRW 15M by a small enterprise exceeds the KRW 10M threshold, triggering CTR with no suspicion (TFTIA Art. 4-2).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Single-day cash deposit of KRW 15M by a small enterprise exceeds the KRW 10M threshold, triggering CTR with no suspicion (TFTIA Art. 4-2)."
+    }
+  },
+  {
+    "case_id": "ANO-02",
+    "task": "anomaly",
+    "boundary_axis": "STR vs CTR (structuring)",
+    "facts": "Within the same business day a customer made four cash deposits of KRW 4,000,000 each at different branches, and the stated purpose did not match the account's usual activity.",
+    "gold_determination": "STR",
+    "gold_provisions": [
+      "TFTIA-Art4"
+    ],
+    "discriminating_condition": "deposits structured below the threshold with a purpose mismatch (suspicion of money laundering)",
+    "difficulty": "boundary",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Multi-branch cash deposits structured below threshold by a thin-filer with business activity mismatch trigger STR (TFTIA Art. 4).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Multi-branch cash deposits structured below threshold by a thin-filer with business activity mismatch trigger STR (TFTIA Art. 4)."
+    }
+  },
+  {
+    "case_id": "ANO-03",
+    "task": "anomaly",
+    "boundary_axis": "STR vs none",
+    "facts": "A small wire of KRW 900,000 was sent, but the sender's documents were forged and the funds appeared linked to an illegal scheme.",
+    "gold_determination": "STR",
+    "gold_provisions": [
+      "TFTIA-Art4"
+    ],
+    "discriminating_condition": "reasonable grounds to suspect money laundering regardless of amount",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Wire transfer linked to forged business documents for a small firm triggers STR regardless of transaction size (TFTIA Art. 4).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Wire transfer linked to forged business documents for a small firm triggers STR regardless of transaction size (TFTIA Art. 4)."
+    }
+  },
+  {
+    "case_id": "ANO-04",
+    "task": "anomaly",
+    "boundary_axis": "CTR vs none",
+    "facts": "A company's verified payroll cash withdrawal of KRW 20,000,000 occurred in one business day. Documentation was complete and nothing was suspicious.",
+    "gold_determination": "CTR",
+    "gold_provisions": [
+      "TFTIA-Art4-2",
+      "TFTIA-Enf-Art8-2"
+    ],
+    "discriminating_condition": "cash of KRW 10M or more within one business day, no suspicion",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Verified payroll cash withdrawal of KRW 20M by a small enterprise exceeds KRW 10M, requiring CTR without suspicion (TFTIA Art. 4-2).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Verified payroll cash withdrawal of KRW 20M by a small enterprise exceeds KRW 10M, requiring CTR without suspicion (TFTIA Art. 4-2)."
+    }
+  },
+  {
+    "case_id": "ANO-05",
+    "task": "anomaly",
+    "boundary_axis": "threshold timing",
+    "facts": "A customer deposited KRW 7,000,000 in cash on Monday and KRW 7,000,000 on Tuesday. There was no indication of suspicion and no apparent attempt to evade reporting.",
+    "gold_determination": "none",
+    "gold_provisions": [
+      "TFTIA-Art4-2"
+    ],
+    "discriminating_condition": "cash split across more than one business day, threshold not aggregated, no suspicion",
+    "difficulty": "boundary",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Cash deposits split across business days by a small merchant without structuring intent do not aggregate for CTR (none).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Cash deposits split across business days by a small merchant without structuring intent do not aggregate for CTR (none)."
+    }
+  },
+  {
+    "case_id": "ANO-06",
+    "task": "anomaly",
+    "boundary_axis": "STR vs CTR (structuring)",
+    "facts": "A customer made three cash deposits of KRW 3,500,000 within an hour across two branches and asked staff whether deposits 'under the limit' are reported.",
+    "gold_determination": "STR",
+    "gold_provisions": [
+      "TFTIA-Art4"
+    ],
+    "discriminating_condition": "structuring to evade the threshold is itself a ground for suspicion",
+    "difficulty": "boundary",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Rapid cash deposits below threshold with queries on CTR limits indicate intentional structuring, requiring STR (TFTIA Art. 4).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Rapid cash deposits below threshold with queries on CTR limits indicate intentional structuring, requiring STR (TFTIA Art. 4)."
+    }
+  },
+  {
+    "case_id": "ANO-07",
+    "task": "anomaly",
+    "boundary_axis": "STR vs CTR vs none",
+    "facts": "A customer transacted KRW 12,000,000 in cash within one business day with no suspicious indicators.",
+    "gold_determination": "CTR",
+    "gold_provisions": [
+      "TFTIA-Art4-2",
+      "TFTIA-Enf-Art8-2"
+    ],
+    "discriminating_condition": "cash of KRW 10M or more within one business day, no suspicion",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Single-day cash deposit of KRW 12M by a small business owner exceeds KRW 10M threshold with no suspicion, requiring CTR (TFTIA Art. 4-2).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Single-day cash deposit of KRW 12M by a small business owner exceeds KRW 10M threshold with no suspicion, requiring CTR (TFTIA Art. 4-2)."
+    }
+  },
+  {
+    "case_id": "ANO-08",
+    "task": "anomaly",
+    "boundary_axis": "STR vs CTR vs none",
+    "facts": "A customer transacted KRW 9,500,000 in cash within one business day with no suspicious indicators.",
+    "gold_determination": "none",
+    "gold_provisions": [
+      "TFTIA-Art4-2"
+    ],
+    "discriminating_condition": "cash below threshold or not aggregated within one business day, no suspicion",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Cash transaction of KRW 9.5M in one business day is below the CTR threshold; no report required for normal business operations (none).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Cash transaction of KRW 9.5M in one business day is below the CTR threshold; no report required for normal business operations (none)."
+    }
+  },
+  {
+    "case_id": "ANO-09",
+    "task": "anomaly",
+    "boundary_axis": "STR vs CTR vs none",
+    "facts": "A customer transacted KRW 50,000,000 in cash within one business day with no suspicious indicators.",
+    "gold_determination": "CTR",
+    "gold_provisions": [
+      "TFTIA-Art4-2",
+      "TFTIA-Enf-Art8-2"
+    ],
+    "discriminating_condition": "cash of KRW 10M or more within one business day, no suspicion",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Single-day cash transaction of KRW 50M by a small enterprise exceeds threshold without suspicion, requiring CTR (TFTIA Art. 4-2).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Single-day cash transaction of KRW 50M by a small enterprise exceeds threshold without suspicion, requiring CTR (TFTIA Art. 4-2)."
+    }
+  },
+  {
+    "case_id": "ANO-10",
+    "task": "anomaly",
+    "boundary_axis": "STR vs CTR vs none",
+    "facts": "A customer transacted KRW 6,000,000 in cash split across two business days with no suspicious indicators.",
+    "gold_determination": "none",
+    "gold_provisions": [
+      "TFTIA-Art4-2"
+    ],
+    "discriminating_condition": "cash below threshold or not aggregated within one business day, no suspicion",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. KRW 6M cash split across two business days by a small merchant is below threshold, requiring no report (none).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. KRW 6M cash split across two business days by a small merchant is below threshold, requiring no report (none)."
+    }
+  },
+  {
+    "case_id": "ANO-11",
+    "task": "anomaly",
+    "boundary_axis": "STR vs CTR vs none",
+    "facts": "A cash transaction of KRW 2,000,000 occurred with clear indicators of money laundering.",
+    "gold_determination": "STR",
+    "gold_provisions": [
+      "TFTIA-Art4"
+    ],
+    "discriminating_condition": "reasonable grounds to suspect money laundering regardless of amount",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Cash transaction showing clear money laundering indicators in a small business account requires STR regardless of amount (TFTIA Art. 4).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Cash transaction showing clear money laundering indicators in a small business account requires STR regardless of amount (TFTIA Art. 4)."
+    }
+  },
+  {
+    "case_id": "ANO-12",
+    "task": "anomaly",
+    "boundary_axis": "STR vs CTR vs none",
+    "facts": "A customer transacted KRW 30,000,000 in cash within one business day with no suspicious indicators.",
+    "gold_determination": "CTR",
+    "gold_provisions": [
+      "TFTIA-Art4-2",
+      "TFTIA-Enf-Art8-2"
+    ],
+    "discriminating_condition": "cash of KRW 10M or more within one business day, no suspicion",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Cash deposit of KRW 30M in one business day by a small firm exceeds threshold without suspicion, requiring CTR (TFTIA Art. 4-2).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Cash deposit of KRW 30M in one business day by a small firm exceeds threshold without suspicion, requiring CTR (TFTIA Art. 4-2)."
+    }
+  },
+  {
+    "case_id": "ANO-13",
+    "task": "anomaly",
+    "boundary_axis": "STR vs CTR",
+    "facts": "A customer deposited KRW 11,000,000 in cash in one business day; separately, the branch noted the customer's explanations were inconsistent and possibly concealing the source.",
+    "gold_determination": "STR",
+    "gold_provisions": [
+      "TFTIA-Art4"
+    ],
+    "discriminating_condition": "suspicion of money laundering takes priority over the threshold report",
+    "difficulty": "boundary",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Both CTR threshold and STR suspicion present; STR governs as the higher-priority duty. | Expert: Confirmed. Inconsistent source explanation by a thin-filer enterprise gives rise to money laundering suspicion; STR overrides CTR (TFTIA Art. 4).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Inconsistent source explanation by a thin-filer enterprise gives rise to money laundering suspicion; STR overrides CTR (TFTIA Art. 4)."
+    }
+  },
+  {
+    "case_id": "ANO-14",
+    "task": "anomaly",
+    "boundary_axis": "CTR vs none",
+    "facts": "A single cash deposit of exactly KRW 10,000,000 was made in one business day with no suspicion.",
+    "gold_determination": "CTR",
+    "gold_provisions": [
+      "TFTIA-Art4-2",
+      "TFTIA-Enf-Art8-2"
+    ],
+    "discriminating_condition": "cash meets the KRW 10M threshold within one business day",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Cash deposit of exactly KRW 10M by a small business meets the CTR threshold (TFTIA Art. 4-2 / Enf. Art. 8-2).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Cash deposit of exactly KRW 10M by a small business meets the CTR threshold (TFTIA Art. 4-2 / Enf. Art. 8-2)."
+    }
+  },
+  {
+    "case_id": "ANO-15",
+    "task": "anomaly",
+    "boundary_axis": "none",
+    "facts": "A customer made an electronic (non-cash) transfer of KRW 40,000,000 between their own verified accounts with no suspicion.",
+    "gold_determination": "none",
+    "gold_provisions": [
+      "TFTIA-Art4-2"
+    ],
+    "discriminating_condition": "non-cash transfer does not meet the currency transaction report and no suspicion",
+    "difficulty": "distractor",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Non-cash electronic transfer between verified business accounts of a small firm is exempt from CTR (none).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Non-cash electronic transfer between verified business accounts of a small firm is exempt from CTR (none)."
+    }
+  },
+  {
+    "case_id": "ANO-16",
+    "task": "anomaly",
+    "boundary_axis": "STR",
+    "facts": "Multiple third parties deposited small cash amounts into one account that were immediately wired overseas, a pattern consistent with layering.",
+    "gold_determination": "STR",
+    "gold_provisions": [
+      "TFTIA-Art4"
+    ],
+    "discriminating_condition": "layering pattern gives reasonable grounds to suspect money laundering",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Third-party cash deposits into a thin-filer account immediately wired overseas indicate layering, requiring STR (TFTIA Art. 4).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Third-party cash deposits into a thin-filer account immediately wired overseas indicate layering, requiring STR (TFTIA Art. 4)."
+    }
+  },
+  {
+    "case_id": "ANO-17",
+    "task": "anomaly",
+    "boundary_axis": "threshold timing",
+    "facts": "A customer deposited KRW 8,000,000 cash in the morning and KRW 8,000,000 cash in the afternoon of the same business day with no suspicion.",
+    "gold_determination": "CTR",
+    "gold_provisions": [
+      "TFTIA-Art4-2",
+      "TFTIA-Enf-Art8-2"
+    ],
+    "discriminating_condition": "cash aggregated per person within one business day meets the threshold",
+    "difficulty": "boundary",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Same-day morning and afternoon cash deposits totaling KRW 16M for a small merchant meet CTR threshold (TFTIA Art. 4-2).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Same-day morning and afternoon cash deposits totaling KRW 16M for a small merchant meet CTR threshold (TFTIA Art. 4-2)."
+    }
+  },
+  {
+    "case_id": "ANO-18",
+    "task": "anomaly",
+    "boundary_axis": "none",
+    "facts": "A customer paid KRW 500,000 in cash for a routine fee with complete documentation and no suspicion.",
+    "gold_determination": "none",
+    "gold_provisions": [
+      "TFTIA-Art4-2"
+    ],
+    "discriminating_condition": "cash far below threshold and no suspicion",
+    "difficulty": "distractor",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Routine fee payment of KRW 500k in cash by a small enterprise is far below CTR threshold with no suspicion (none).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Routine fee payment of KRW 500k in cash by a small enterprise is far below CTR threshold with no suspicion (none)."
+    }
+  }
+]

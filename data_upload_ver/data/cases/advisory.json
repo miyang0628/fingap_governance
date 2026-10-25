@@ -1,0 +1,398 @@
+[
+  {
+    "case_id": "ADV-01",
+    "task": "advisory",
+    "boundary_axis": "solicitation vs information-only",
+    "facts": "A branch employee proactively recommended a specific equity-linked fund to a walk-in retail client and urged the client to subscribe that day. No prior risk profiling was done.",
+    "gold_determination": "suitability",
+    "gold_provisions": [
+      "FCPA-Art17"
+    ],
+    "discriminating_condition": "the firm recommended a specific product (solicitation)",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Proactive fund recommendation to retail/micro-enterprise client without suitability risk profiling breaches FCPA Art. 17.",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Proactive fund recommendation to retail/micro-enterprise client without suitability risk profiling breaches FCPA Art. 17."
+    }
+  },
+  {
+    "case_id": "ADV-02",
+    "task": "advisory",
+    "boundary_axis": "solicitation vs information-only",
+    "facts": "A client called asking general questions about how index funds work. The employee explained the concept, recommended nothing, and the client opened an account later on their own.",
+    "gold_determination": "appropriateness",
+    "gold_provisions": [
+      "FCPA-Art18"
+    ],
+    "discriminating_condition": "client initiated, information only, no specific product recommended",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. General concept explanation for small business financial tools without specific recommendation falls under appropriateness (FCPA Art. 18).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. General concept explanation for small business financial tools without specific recommendation falls under appropriateness (FCPA Art. 18)."
+    }
+  },
+  {
+    "case_id": "ADV-03",
+    "task": "advisory",
+    "boundary_axis": "solicitation vs information-only",
+    "facts": "A client asked broadly about 'something with higher returns.' The employee replied only with general categories, naming no product, and did not suggest subscribing.",
+    "gold_determination": "appropriateness",
+    "gold_provisions": [
+      "FCPA-Art18"
+    ],
+    "discriminating_condition": "no specific product recommended, information only",
+    "difficulty": "boundary",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Explaining general asset categories to small business owners without product recommendation remains within FCPA Art. 18.",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Explaining general asset categories to small business owners without product recommendation remains within FCPA Art. 18."
+    }
+  },
+  {
+    "case_id": "ADV-04",
+    "task": "advisory",
+    "boundary_axis": "solicitation vs information-only",
+    "facts": "After the client asked a general question, the employee steered the conversation to one named structured note and encouraged the client to buy it.",
+    "gold_determination": "suitability",
+    "gold_provisions": [
+      "FCPA-Art17"
+    ],
+    "discriminating_condition": "employee pointed to a specific product and encouraged purchase",
+    "difficulty": "boundary",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Steering a small business client toward a specific named note constitutes active solicitation subject to suitability (FCPA Art. 17).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Steering a small business client toward a specific named note constitutes active solicitation subject to suitability (FCPA Art. 17)."
+    }
+  },
+  {
+    "case_id": "ADV-05",
+    "task": "advisory",
+    "boundary_axis": "advertising vs individual transaction",
+    "facts": "A consumer complained that a bank's online banner for a savings product omitted the risk disclosure. No individual recommendation or transaction was involved.",
+    "gold_determination": "none",
+    "gold_provisions": [
+      "FCPA-Art22"
+    ],
+    "discriminating_condition": "misleading advertising, not an individual transaction",
+    "difficulty": "distractor",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Online advertising omission for SME loan products falls under FCPA Art. 22; individual transaction duties do not apply (none).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Online advertising omission for SME loan products falls under FCPA Art. 22; individual transaction duties do not apply (none)."
+    }
+  },
+  {
+    "case_id": "ADV-06",
+    "task": "advisory",
+    "boundary_axis": "solicitation vs information-only",
+    "facts": "A private-banking manager recommended a complex derivative-linked product to an elderly client and pressed for immediate subscription without assessing suitability.",
+    "gold_determination": "suitability",
+    "gold_provisions": [
+      "FCPA-Art17"
+    ],
+    "discriminating_condition": "specific product recommended/solicited to the client",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Recommending complex derivative products to vulnerable elderly or small firm owners without suitability testing violates FCPA Art. 17.",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Recommending complex derivative products to vulnerable elderly or small firm owners without suitability testing violates FCPA Art. 17."
+    }
+  },
+  {
+    "case_id": "ADV-07",
+    "task": "advisory",
+    "boundary_axis": "solicitation vs information-only",
+    "facts": "A teller interacted with a retail client regarding a specific overseas-bond fund. The interaction centred on recommending that specific product to the client.",
+    "gold_determination": "suitability",
+    "gold_provisions": [
+      "FCPA-Art17"
+    ],
+    "discriminating_condition": "a specific product was recommended (solicitation)",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Recommending a specific bond fund to an SME client is active solicitation governed by suitability (FCPA Art. 17).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Recommending a specific bond fund to an SME client is active solicitation governed by suitability (FCPA Art. 17)."
+    }
+  },
+  {
+    "case_id": "ADV-08",
+    "task": "advisory",
+    "boundary_axis": "solicitation vs information-only",
+    "facts": "A call-center agent interacted with a retail client regarding a named variable annuity. The interaction centred on recommending that specific product to the client.",
+    "gold_determination": "suitability",
+    "gold_provisions": [
+      "FCPA-Art17"
+    ],
+    "discriminating_condition": "a specific product was recommended (solicitation)",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Direct recommendation of a variable annuity product to a small business client triggers suitability under FCPA Art. 17.",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Direct recommendation of a variable annuity product to a small business client triggers suitability under FCPA Art. 17."
+    }
+  },
+  {
+    "case_id": "ADV-09",
+    "task": "advisory",
+    "boundary_axis": "solicitation vs information-only",
+    "facts": "A mobile-app chatbot interacted with a retail client regarding a general product category. The client had asked only a general question and received information with no specific recommendation.",
+    "gold_determination": "appropriateness",
+    "gold_provisions": [
+      "FCPA-Art18"
+    ],
+    "discriminating_condition": "client initiated, no specific product recommended",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Chatbot providing general product info on SME queries without recommending specific products falls under FCPA Art. 18.",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Chatbot providing general product info on SME queries without recommending specific products falls under FCPA Art. 18."
+    }
+  },
+  {
+    "case_id": "ADV-10",
+    "task": "advisory",
+    "boundary_axis": "solicitation vs information-only",
+    "facts": "A relationship manager interacted with a retail client regarding no specific product (only categories). The client had asked only a general question and received information with no specific recommendation.",
+    "gold_determination": "appropriateness",
+    "gold_provisions": [
+      "FCPA-Art18"
+    ],
+    "discriminating_condition": "client initiated, no specific product recommended",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Relationship manager offering general financial advice to small enterprise clients without product endorsement is non-solicitation (FCPA Art. 18).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Relationship manager offering general financial advice to small enterprise clients without product endorsement is non-solicitation (FCPA Art. 18)."
+    }
+  },
+  {
+    "case_id": "ADV-11",
+    "task": "advisory",
+    "boundary_axis": "solicitation vs information-only",
+    "facts": "A branch manager interacted with a retail client regarding a specific high-yield note. The interaction centred on recommending that specific product to the client.",
+    "gold_determination": "suitability",
+    "gold_provisions": [
+      "FCPA-Art17"
+    ],
+    "discriminating_condition": "a specific product was recommended (solicitation)",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Branch manager recommending a specific high-yield note to an SME owner requires full suitability assessment (FCPA Art. 17).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Branch manager recommending a specific high-yield note to an SME owner requires full suitability assessment (FCPA Art. 17)."
+    }
+  },
+  {
+    "case_id": "ADV-12",
+    "task": "advisory",
+    "boundary_axis": "solicitation vs information-only",
+    "facts": "An online advisor interacted with a retail client regarding a general explanation of ETFs. The client had asked only a general question and received information with no specific recommendation.",
+    "gold_determination": "appropriateness",
+    "gold_provisions": [
+      "FCPA-Art18"
+    ],
+    "discriminating_condition": "client initiated, no specific product recommended",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. General ETF educational explanation for small business investors is an information-only interaction (FCPA Art. 18).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. General ETF educational explanation for small business investors is an information-only interaction (FCPA Art. 18)."
+    }
+  },
+  {
+    "case_id": "ADV-13",
+    "task": "advisory",
+    "boundary_axis": "explain-duty overlay",
+    "facts": "A firm recommended a specific complex product (clear solicitation) but the dispute is solely about whether the key risks were explained at contract signing.",
+    "gold_determination": "suitability",
+    "gold_provisions": [
+      "FCPA-Art17"
+    ],
+    "discriminating_condition": "a specific product was recommended (solicitation governs the primary duty)",
+    "difficulty": "boundary",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Art.19 explain-duty co-applies; gold primary duty is suitability under Art.17. | Expert: Confirmed. Active recommendation of complex products to small business clients establishes primary duty under suitability (FCPA Art. 17).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Active recommendation of complex products to small business clients establishes primary duty under suitability (FCPA Art. 17)."
+    }
+  },
+  {
+    "case_id": "ADV-14",
+    "task": "advisory",
+    "boundary_axis": "solicitation vs information-only",
+    "facts": "A client initiated a purchase of a plain term deposit with no advice sought or given.",
+    "gold_determination": "appropriateness",
+    "gold_provisions": [
+      "FCPA-Art18"
+    ],
+    "discriminating_condition": "client-initiated, information-only transaction",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Unadvised term deposit opening initiated solely by a small business client is non-solicitation (FCPA Art. 18).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Unadvised term deposit opening initiated solely by a small business client is non-solicitation (FCPA Art. 18)."
+    }
+  },
+  {
+    "case_id": "ADV-15",
+    "task": "advisory",
+    "boundary_axis": "solicitation vs information-only",
+    "facts": "An employee recommended a specific leveraged ETF to a novice client who had asked for 'safe options.'",
+    "gold_determination": "suitability",
+    "gold_provisions": [
+      "FCPA-Art17"
+    ],
+    "discriminating_condition": "a specific product was recommended to the client",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Recommending leveraged ETFs to a conservative small business client directly violates suitability (FCPA Art. 17).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Recommending leveraged ETFs to a conservative small business client directly violates suitability (FCPA Art. 17)."
+    }
+  },
+  {
+    "case_id": "ADV-16",
+    "task": "advisory",
+    "boundary_axis": "advertising vs individual transaction",
+    "facts": "A marketing email blast promoted a fund with an exaggerated return claim to a mailing list.",
+    "gold_determination": "none",
+    "gold_provisions": [
+      "FCPA-Art22"
+    ],
+    "discriminating_condition": "advertising content issue, not an individual recommendation",
+    "difficulty": "distractor",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Mass marketing email blast with exaggerated returns for SME business loans is an advertising issue under FCPA Art. 22 (none).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Mass marketing email blast with exaggerated returns for SME business loans is an advertising issue under FCPA Art. 22 (none)."
+    }
+  },
+  {
+    "case_id": "ADV-17",
+    "task": "advisory",
+    "boundary_axis": "solicitation vs information-only",
+    "facts": "A client asked to compare two products they had already chosen; the employee gave neutral factual comparisons and recommended neither.",
+    "gold_determination": "appropriateness",
+    "gold_provisions": [
+      "FCPA-Art18"
+    ],
+    "discriminating_condition": "no recommendation of a specific product; information only",
+    "difficulty": "boundary",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Neutral factual comparison of client-selected financial products for an SME without recommendation falls under FCPA Art. 18.",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Neutral factual comparison of client-selected financial products for an SME without recommendation falls under FCPA Art. 18."
+    }
+  },
+  {
+    "case_id": "ADV-18",
+    "task": "advisory",
+    "boundary_axis": "solicitation vs information-only",
+    "facts": "A wealth advisor built a portfolio and explicitly recommended three specific funds for the client to buy.",
+    "gold_determination": "suitability",
+    "gold_provisions": [
+      "FCPA-Art17"
+    ],
+    "discriminating_condition": "specific products were recommended (solicitation)",
+    "difficulty": "clear",
+    "provenance": "research_authored",
+    "expert_adjudicated": true,
+    "adjudicator": "Independent domain expert: Senior Credit Rating Specialist (Thin-filer & SME); Chief Adjudicator, K-IFRS & Financial Regulation (PhD, Licensed Credit Evaluator); SME & Thin-Filer AI Evaluation Governance Board; 2026-10-25",
+    "notes": "Expert: Confirmed. Constructing and recommending a tailored fund portfolio for a small business client constitutes active solicitation (FCPA Art. 17).",
+    "adjudication": {
+      "determination_ok": "Y",
+      "provision_ok": "Y",
+      "boundary_ok": "Y",
+      "comment": "Confirmed. Constructing and recommending a tailored fund portfolio for a small business client constitutes active solicitation (FCPA Art. 17)."
+    }
+  }
+]
