@@ -1,137 +1,172 @@
-# FinGap-Governance
+# Judgment-to-Provision Traceability in Financial LLMs
 
-Replication materials for the paper *"FinGap-Governance: A
-Traceability-Centric Framework for Diagnosing Isomorphic Regulatory Blind
-Spots in Financial LLMs across Anomaly Detection, Advisory, and
-Accounting Tasks."*
+Replication code and data for a study submitted to a peer-reviewed journal
+under **double-anonymous review**. All author and institutional identifiers
+are intentionally omitted.
 
-> **Anonymized for peer review.** Author, affiliation, and venue
-> information has been removed in accordance with double-blind review
-> requirements. This notice will be replaced with full metadata upon
-> acceptance.
+The study reframes regulatory risk in financial large language models (LLMs)
+as a failure of **judgment-to-provision traceability** — an LLM can reach the
+right determination while being unable to show *which provision grounds it* —
+and tests, in a controlled experiment, whether the same failure structure
+recurs across three regulatory tasks and whether an explicit
+provision-judgment graph repairs it.
 
-This repository contains the schema-audit and illustrative-walkthrough
-code that supports the paper's existence-proof evidence. It does **not**
-contain large-scale quantitative measurement or full dataset labeling,
-which are out of scope for the paper and reserved for a companion study.
+| Task | Regulatory boundary | Governing provisions |
+|------|--------------------|----------------------|
+| **Advisory** | suitability vs. appropriateness | FCPA\* Art. 17 / Art. 18 (+ Art. 19) |
+| **Anomaly detection** | STR vs. CTR | TFTIA† Art. 4 / Art. 4-2 (+ Enf. Decree Art. 8-2) |
+| **Accounting** | over-time vs. point-in-time | K-IFRS 1115 para. 35 / 35(3) / 38 |
 
----
+\* **FCPA = (Korean) Financial Consumer Protection Act** — *not* the U.S. Foreign
+Corrupt Practices Act. † **TFTIA = Act on Reporting and Using Specified
+Financial Transaction Information.**
 
-## What this repository provides
+## What the experiment does
 
-- A **schema audit** of three public financial datasets (one per task),
-  documenting that each carries a determination label but no
-  judgment-to-provision linkage label.
-- Three **illustrative walkthroughs** (advisory, anomaly, accounting),
-  each run under three conditions — direct judgment, vanilla RAG, and the
-  provision-judgment graph (GraphRAG) — as an existence proof of the
-  isomorphic failure and its structural remedy.
-- **Figure-generation** code that reproduces the greyscale figures used
-  in the paper from the walkthrough outputs.
+Each case is run under **three conditions that share the same model and the
+same case facts**, differing only in the evidence scaffold:
 
-The three conditions are implemented as deterministic stubs that encode
-the traversal logic described in the paper; they are sufficient to
-reproduce the reported walkthrough outcomes and figures. Replacing the
-stubs with live model calls is left to downstream empirical work.
+1. **Direct** — model judgment only, no external text.
+2. **Vanilla RAG** — top-*k* passages (`k=4`) retrieved from a regulatory
+   corpus by cosine similarity over `text-embedding-3-small`, 600-char chunks
+   with 100-char overlap.
+3. **Provision-Judgment GraphRAG** — a manually-curated graph supplied as
+   *general rule structure* (each provision with its triggering condition and
+   supersession status); citations are constrained to canonical, non-superseded
+   identifiers by a citation guard. The graph encodes the rules, **not** the
+   answer to any case, so the model must still perform the subsumption.
 
----
+The full matrix is **3 conditions × 3 tasks × 3 models × 5 repeats = 2,430
+runs**, at temperature 0.7 with a distinct seed per repeat. Grounding is scored
+by a rule-based check and, independently, by an LLM judge (held at temperature
+0) that never sees the case authors' reasoning.
 
-## Repository structure
+Reported metrics (empirical, mean ± std over repeats): determination accuracy,
+**traceability completion rate**, **correct-but-untraceable rate** (the study's
+core quantity), the five-type failure profile, boundary-misjudgment detection,
+and a **cross-task failure-profile similarity** (the structural-recurrence /
+"isomorphism" metric).
 
-```text
+### Headline result (from the notebooks)
+
+| Condition | Det. accuracy | Traceability | Correct-but-untraceable |
+|-----------|:---:|:---:|:---:|
+| Direct | 54–81% (rises with model size) | **0% at every model size** | high |
+| Vanilla RAG | 70–84% | 0–12% | **highest (up to ~77%)** |
+| GraphRAG | 89–98% | **68–96%** | low |
+
+Scaling the model closes the *accuracy* gap but not the *traceability* gap;
+only the graph recovers traceability, and it removes hallucinated citations
+entirely (0% of GraphRAG failures). Rule-based and LLM-judge grounding agree on
+96.1% of runs.
+
+## Repository layout
+
+```
 .
-├── data/                           # not tracked; populated by setup (see below)
-│   ├── anomaly/raw/                 # transaction CSV
-│   ├── advisory/labeled/            # consulting QAQ JSON
-│   ├── accounting/labeled/          # accounting QA JSON (standard sub-tree preserved)
-│   └── cases/                       # reconstructed, PII-free walkthrough inputs
+├── .env.example               # copy to .env (project root) and add your API key
+├── requirements.txt
+├── data/
+│   ├── corpus/<task>.json      # RAG corpus: governing + distractor provisions (shipped)
+│   ├── graph/<task>.json       # provision-judgment graph, manually curated (shipped)
+│   ├── cases/<task>.json       # case bank: 18/task, expert-adjudicated (shipped)
+│   └── cache/                  # LLM response cache (git-ignored)
 ├── notebooks/
-│   ├── setup_data.ipynb             # unpack source archives into data/
-│   ├── 00_shared_utils.ipynb        # paths, provision vocabulary, guards, writers
-│   ├── 01_advisory_str.ipynb        # audit + walkthrough: suitability vs appropriateness
-│   ├── 02_anomaly_str_ctr.ipynb     # audit + walkthrough: STR vs CTR
-│   ├── 03_accounting_ifrs15.ipynb   # audit + walkthrough: over-time vs point-in-time
-│   └── 04_figures.ipynb             # greyscale figures from walkthrough outputs
+│   ├── fingap_core.py              # shared core: client, RAG, graph, prompts, scorer
+│   ├── _build_artifacts.py         # authored corpus/graph/cases (version-controlled)
+│   ├── 00_shared_utils.ipynb       # load & smoke-test the core
+│   ├── 01_build_corpus_graph_cases.ipynb
+│   ├── 02_schema_audit.ipynb       # data-level audit of raw AI-Hub schemas
+│   ├── 03_experiment_advisory.ipynb
+│   ├── 04_experiment_anomaly.ipynb
+│   ├── 05_experiment_accounting.ipynb
+│   ├── 06_metrics.ipynb            # aggregate runs -> metrics_*.csv
+│   └── 07_figures.ipynb            # greyscale figures, dpi 600, png + pdf
 └── results/
-    ├── figures/                     # generated figures (png + pdf, dpi 600)
-    └── tables/                      # schema-audit tables + walkthrough JSON
+    ├── figures/               # generated (git-ignored)
+    └── tables/                # generated (git-ignored)
 ```
 
----
+Each notebook is a single self-documenting code cell; all comments are in
+English. Notebooks `00`–`07` are run in order from the `notebooks/` folder.
 
-## Requirements
-
-- Python 3.10+
-- `pandas`, `matplotlib`, `seaborn`
+## Setup
 
 ```bash
-pip install pandas matplotlib seaborn
+pip install -r requirements.txt
+cp .env.example .env         # then edit .env and add OPENAI_API_KEY
 ```
 
-Notebooks run under Jupyter or any environment that executes `.ipynb`
-files. Each analysis notebook is self-contained and can be run
-independently; none requires the others to be run first.
+`.env` lives in the **project root** (one level above `notebooks/`):
 
----
+```
+OPENAI_API_KEY=sk-...
+LLM_MODEL_WEAK=gpt-4o-mini
+LLM_MODEL_MID=gpt-5.4-mini
+LLM_MODEL_STRONG=gpt-5.4
+FINGAP_TEMPERATURE=0.7
+FINGAP_REPEATS=5
+```
+
+### Mock vs. live
+
+- **Mock (offline, no key, no cost):** if `OPENAI_API_KEY` is absent, or
+  `FINGAP_MODE=mock`, the whole pipeline runs with a deterministic surrogate
+  LLM and surrogate embeddings, so the build → run → score → figures path can
+  be verified end-to-end without network or cost. *Mock outputs are surrogate
+  and are not experimental data.*
+- **Live:** with a valid key in `.env`, notebooks `03`–`05` call the API.
+
+Repeats at temperature > 0 are genuinely independent draws: `run_index` is
+folded into both the response-cache key and the per-call seed, so five repeats
+produce five samples (not one cached result), which is what yields the ± std.
+
+## How to run
+
+```bash
+cd notebooks
+jupyter notebook        # run 00 → 07 in order
+```
+
+Headless:
+
+```bash
+cd notebooks
+for nb in 00_shared_utils 01_build_corpus_graph_cases 02_schema_audit \
+          03_experiment_advisory 04_experiment_anomaly 05_experiment_accounting \
+          06_metrics 07_figures; do
+  jupyter nbconvert --to notebook --execute --inplace "$nb.ipynb" \
+    --ExecutePreprocessor.timeout=3600
+done
+```
+
+Cost scales as `cases × 3 conditions × tiers × repeats` (+ one judge call per
+correctly-cited run). For a cheap smoke test set `FINGAP_MAX_CASES=2` and
+`FINGAP_TIERS=weak` in `.env`, then scale up.
 
 ## Data
 
-This repository does **not** redistribute the source datasets. The study
-uses publicly available datasets from a national open-data repository,
-under their respective terms of use. In line with those terms, only
-newly attached labels and reconstructed, PII-free walkthrough cases
-authored for this study are released here; original records are not.
+The **corpus, provision graph, and case bank** under `data/{corpus,graph,cases}/`
+are research-authored, PII-free, and shipped with the repository. The case gold
+labels have been **independently adjudicated by a domain expert** (a senior
+credit-rating and financial-regulation specialist), who confirmed all 54 cases
+with no corrections; each case records `expert_adjudicated`, `adjudicator`, and
+the adjudication comment.
 
-To reproduce the schema audit, obtain the source archives from the
-repository and place them alongside `setup_data.ipynb`, then run that
-notebook. It unpacks and sorts the files into the `data/` layout the
-analysis notebooks expect. The `data/` directory is excluded from version
-control (see `.gitignore`).
+The raw **AI-Hub** datasets are **not redistributed** (per their terms of use).
+To run the data-level schema audit (`02`), place the labelled trees under
+`data/advisory/`, `data/anomaly/`, `data/accounting/`; they are git-ignored.
+The experiment notebooks `03`–`05` do **not** require the raw data.
 
-The three reconstructed walkthrough cases under `data/cases/` are
-included in this repository, since they contain no original data.
+**Windows note:** the schema audit opens deeply-nested Korean file paths; the
+notebook uses the `\\?\` extended-length prefix so it works past the 260-char
+`MAX_PATH` limit. If you still see unreadable files, move the project to a
+shorter path (e.g. `C:\fingap\`).
 
----
+## Scope and limitations
 
-## Reproducing the results
-
-1. **Set up data.** Run `notebooks/setup_data.ipynb` after placing the
-   source archives in the expected location. If you run notebooks from
-   inside `notebooks/`, set the project root first:
-```python
-   import os; os.environ["FINGAP_ROOT"] = ".."
-```
-2. **Run the audits and walkthroughs.** Run `01`, `02`, and `03` in any
-   order. Each emits a schema-audit table and a walkthrough JSON to
-   `results/tables/`.
-3. **Generate figures.** Run `04_figures.ipynb` to produce the greyscale
-   figures in `results/figures/` (PNG and PDF, 600 dpi).
-
-Expected outputs:
-
-| Output | Location |
-|---|---|
-| Schema-audit tables (one per task) | `results/tables/*_schema_audit.csv` |
-| Walkthrough results (one per task) | `results/tables/*_walkthrough.json` |
-| Traceability matrix figure | `results/figures/fig3a_traceability_matrix.{png,pdf}` |
-| Failure-by-condition figure | `results/figures/fig3b_failure_by_condition.{png,pdf}` |
-
----
-
-## Notes on scope
-
-The evidence here is an **existence proof**, not a distribution. Three
-walkthroughs cannot establish that the isomorphism holds at scale; they
-show that the framework's objects behave as claimed on realistic
-boundary cases. The benchmark whose design the paper publishes
-(label schema, labeling protocol, evaluation metrics, and falsification
-conditions) is intended to be populated and measured in subsequent
-empirical work.
-
----
-
-## License
-
-Code in this repository is released under the MIT License (see
-`LICENSE`). This license covers the code only; the source datasets remain
-subject to their own terms of use and are not redistributed here.
+The experiment is a **controlled study on a reconstructed case bank**, not a
+field-scale measurement on the source datasets. Its gold labels were confirmed
+by a single independent expert; multi-expert adjudication and field-scale
+prevalence measurement are the subject of a companion study. See the manuscript
+for the full statement of scope and the benchmark's falsification conditions.
