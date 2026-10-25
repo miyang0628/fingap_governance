@@ -1,0 +1,10 @@
+task,condition,boundary_detection_rate_pct
+accounting,direct,55.0
+accounting,graph_rag,90.0
+accounting,vanilla_rag,83.3
+advisory,direct,18.3
+advisory,graph_rag,83.3
+advisory,vanilla_rag,36.7
+anomaly,direct,61.3
+anomaly,graph_rag,93.3
+anomaly,vanilla_rag,34.7

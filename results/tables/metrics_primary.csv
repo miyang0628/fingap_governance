@@ -1,0 +1,12 @@
+,,mean,mean,mean,std,std,std
+metric,,correct_but_untraceable,determination_correct,traceable,correct_but_untraceable,determination_correct,traceable
+task,condition,,,,,,
+accounting,direct,76.7,76.7,0.0,1.0,1.0,0.0
+accounting,graph_rag,20.4,88.5,68.1,1.3,0.8,1.5
+accounting,vanilla_rag,71.5,83.7,12.2,3.1,2.4,2.1
+advisory,direct,52.6,52.6,0.0,2.1,2.1,0.0
+advisory,graph_rag,16.3,95.9,79.6,2.7,0.8,2.6
+advisory,vanilla_rag,68.5,68.5,0.0,1.9,1.9,0.0
+anomaly,direct,73.0,73.0,0.0,3.1,3.1,0.0
+anomaly,graph_rag,1.9,98.1,96.3,1.3,0.0,1.3
+anomaly,vanilla_rag,77.0,78.1,1.1,2.1,1.5,1.0

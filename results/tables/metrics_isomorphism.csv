@@ -1,0 +1,10 @@
+condition,task_pair,cosine_similarity
+direct,advisory~anomaly,0.991
+direct,advisory~accounting,0.896
+direct,anomaly~accounting,0.948
+vanilla_rag,advisory~anomaly,0.983
+vanilla_rag,advisory~accounting,0.959
+vanilla_rag,anomaly~accounting,0.994
+graph_rag,advisory~anomaly,0.6
+graph_rag,advisory~accounting,0.851
+graph_rag,anomaly~accounting,0.212

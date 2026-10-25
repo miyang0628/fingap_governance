@@ -1,0 +1,4 @@
+condition,boundary_misjudgment,provision_omission,misattribution,logic_disconnection,hallucination
+direct,0.0,0.275,0.0,0.0,0.725
+graph_rag,0.276,0.517,0.138,0.069,0.0
+vanilla_rag,0.001,0.11,0.013,0.0,0.876
